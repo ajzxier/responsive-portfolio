@@ -68,6 +68,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
+      <div class="parallax-bg"></div>
       <div class="container">
         <h2 class="section-title centered">My Skills</h2>
         <div class="skills-grid">
@@ -117,6 +118,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
+      <div class="parallax-bg"></div>
       <div class="container">
         <h2 class="section-title centered">My Projects</h2>
         <div class="projects-grid">
@@ -184,6 +186,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
+      <div class="parallax-bg"></div>
       <div class="container">
         <h2 class="section-title centered">Get In Touch</h2>
         <div class="contact-grid">
@@ -258,9 +261,6 @@
               </svg>
             </a>
           </div>
-          <div class="theme-toggle">
-            <button id="theme-toggle-btn">Toggle Dark Mode</button>
-          </div>
         </div>
       </div>
     </footer>
@@ -296,32 +296,6 @@
           behavior: 'smooth',
           block: 'start'
         });
-      }
-    });
-
-    // Dark mode toggle
-    const themeToggleBtn = document.getElementById('theme-toggle-btn');
-    themeToggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      
-      // Save preference to localStorage
-      if (document.body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        themeToggleBtn.textContent = 'Switch to Light Mode';
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeToggleBtn.textContent = 'Switch to Dark Mode';
-      }
-    });
-
-    // Check for saved theme preference
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark');
-        themeToggleBtn.textContent = 'Switch to Light Mode';
-      } else {
-        themeToggleBtn.textContent = 'Switch to Dark Mode';
       }
     });
 
